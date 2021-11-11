@@ -1,0 +1,30 @@
+body {
+    font-family: 'baskerville old face';
+}
+
+.item-name {
+    border: 1px solid white;
+    width: 18%;
+    text-align: center;
+}
+
+.item-image {
+    width: 18%;
+}
+
+.item-description {
+    width: 18%;
+    border: 1px solid white;
+    height: 15%;
+    overflow: scroll;
+}
+
+.item-availability {
+    width: 18%;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.item-availability-message {
+    font-size: 2em;
+}

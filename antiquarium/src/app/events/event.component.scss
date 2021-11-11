@@ -1,0 +1,56 @@
+body {
+    font-family: 'baskerville old face';
+}
+
+.flex-container {
+    display: flex;
+}
+
+.event-header {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2%;
+}
+
+.event-area {
+    color: white;
+    background-color: #333333;
+    height: 100%;
+}
+
+.sub-header {
+    padding-top: 2%;
+}
+
+.event-content {
+    margin-left: 2%;
+}
+
+.text-box-small {
+    font-family: 'baskerville old face';
+    width: 15%;
+    margin-right: 2%;
+    padding: 0.2%;
+}
+
+.text-box-large {
+    display: block;
+    font-family: 'baskerville old face';
+    margin-top: 1%;
+    width: 50%;
+    height: 20%;
+}
+
+.submit {
+    color: white;
+    border: 1px solid white;
+    background-color: teal;
+    padding: 1%;
+    width: 10%;
+    font-size: 1em;
+    margin-top: 1%;
+}
+
+.box-label {
+    margin-right: 1%;
+}
