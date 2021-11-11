@@ -54,3 +54,24 @@ body {
 .box-label {
     margin-right: 1%;
 }
+
+@media only screen and (max-width: 414px) {
+    .event-header {
+        font-size: 1.5em;
+    }
+    .text-box-small {
+        width: 90%;
+    }
+    .text-box-large {
+        width: 90%;
+    }
+    .submit {
+        width: 18%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .event-area {
+        height: 150%;
+    }
+}
