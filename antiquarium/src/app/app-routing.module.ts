@@ -13,6 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'event', component: EventComponent
+  },
+  {
+    path: '**', redirectTo: 'main'
   }
 ];
 
