@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { EventComponent } from './events/events.component';
+import { WaresComponent } from './wares/wares.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'event', component: EventComponent
+  },
+  {
+    path: 'wares', component: WaresComponent
   },
   {
     path: '**', redirectTo: 'main'

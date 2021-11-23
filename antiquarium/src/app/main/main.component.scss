@@ -126,12 +126,15 @@ label {
 .items-button {
     width: 22%;
     height: 10%;
-    border-color: white;
+    border: 2px solid white;
     background-color: teal;
     color: white;
     font-family: 'baskerville old face';
     font-size: 1.5em;
-    margin-top: 35%;
+    margin-top: 40%;
+    display: inline-block;
+    padding-top: 1.5%;
+    text-decoration: none;
 }
 
 .items-banner {
@@ -302,6 +305,7 @@ label {
 }
 
 @media only screen and (max-width: 360px) {
+
     .events-button {
         width: 96%;
         height: 74%;
