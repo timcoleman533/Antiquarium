@@ -32,29 +32,30 @@
 <div class="contact-banner">
     <h1 class="contact-header">Contact us:</h1>
 </div>
-<div class="contact-content">
+<div class="contact-content" [formGroup]="messageForm">
     <div class="flex-container">
         <div class="contact-section">
-            <label for="name">Name*</label>
-            <input type="text" id="name" name="name" class="contact-text-box-small">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="contact-text-box-small" formControlName="name">
         </div>
         <div class="contact-section">
-            <label for="phone-number">Phone Number*</label>
-            <input type="text" id="phone-number" name="phone-number" class="contact-text-box-small">
+            <label for="phone-number">Phone Number</label>
+            <input type="text" id="phone-number" name="phone-number" class="contact-text-box-small" formControlName="phoneNumber">
         </div>
         <div class="contact-section">
-            <label for="email">E-mail</label>
-            <input type="text" id="phone-number" name="phone-number" class="contact-text-box-small">
+            <label for="email">E-mail*</label>
+            <input type="text" id="phone-number" name="phone-number" class="contact-text-box-small" formControlName="email">
         </div>
     </div>
     <div class="flex-container">
         <div class="contact-message-area">
-            <label for="contact-message">Message:</label>
-            <textarea name="contact-message" rows="10" cols="150" class="contact-message-box"></textarea>
+            <label for="contact-message">Message*</label>
+            <textarea name="contact-message" rows="10" cols="150" class="contact-message-box" formControlName="message"></textarea>
         </div>
         <div class="optional-reminder">
-            <p>Fields marked with * are optional</p>
-            <button class="send-message-button">Send Message</button>
+            <p>Fields marked with * are required</p>
+            <div *ngIf="checkValid('email')"> {{ errorMessage }} </div>
+            <button class="send-message-button" (click)="saveMessage()">Send Message</button>
         </div>
     </div>
 </div>

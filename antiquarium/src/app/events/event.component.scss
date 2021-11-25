@@ -55,6 +55,18 @@ body {
     margin-right: 1%;
 }
 
+.home-button-area {
+    margin-top: 8%;
+}
+
+.home-button {
+    background-color: teal;
+    padding: 1.5%;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+}
+
 @media only screen and (max-width: 414px) {
     .event-header {
         font-size: 1.5em;
