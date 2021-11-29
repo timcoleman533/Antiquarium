@@ -54,8 +54,8 @@
         </div>
         <div class="optional-reminder">
             <p>Fields marked with * are required</p>
-            <div *ngIf="checkValid('email')"> {{ errorMessage }} </div>
-            <button class="send-message-button" (click)="saveMessage()">Send Message</button>
+            <div *ngIf="checkValid('email','message')"> {{ errorMessage }} </div>
+            <button class="send-message-button" (click)="saveMessage()" [disabled]="messageForm.invalid">Send Message</button>
         </div>
     </div>
 </div>

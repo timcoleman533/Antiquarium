@@ -16,7 +16,9 @@ export class MainComponent {
             Validators.required,
             Validators.email
         ]),
-        message: new FormControl()
+        message: new FormControl('',[
+            Validators.required,
+        ])
     })
 
     errorMessage:string = '';
@@ -36,17 +38,25 @@ export class MainComponent {
         console.log(message);
     }
 
-    checkValid(name:string) {
+    checkValid(name:string, name2:string) {
         const control = this.messageForm.get(name);
+        const control2 = this.messageForm.get(name2);
         let invalid:boolean = false;
-        if (control?.dirty && control?.errors) {
+        if ((control?.dirty || control2?.dirty) && control?.errors) {
             invalid = true;
-            this.errorMessage = 'Please enter a valid email and message';
+            this.errorMessage = 'Please enter a valid email';
             if (control?.hasError('required')) {
                 this.errorMessage = 'The email field is required'
             }
             else if (control?.hasError('email')) {
                 this.errorMessage = 'Please enter a valid email address'
+            }
+        }
+        if ((control2?.dirty || control?.dirty) && control2?.errors) {
+            invalid = true;
+            this.errorMessage = 'Please enter a valid message';
+            if (control2?.hasError('required')) {
+                this.errorMessage = 'The message field is required'
             }
         }
         return invalid;
